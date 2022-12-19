@@ -1,1 +1,2 @@
-P=mingw64 L="-s -static-libgcc -llua51" D=lfs.dll A=lfs.a ./build.sh
+[ `uname` = Linux ] && { export X=x86_64-w64-mingw32-; }
+P=mingw64 C="-fPIC" L="-s -static-libgcc ../../bin/$P/luajit.a" D=lfs.dll A=lfs.a ./build.sh
